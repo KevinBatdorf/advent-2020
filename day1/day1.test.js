@@ -3,6 +3,8 @@ const fs = require('fs')
 const path = require('path')
 const source = fs.readFileSync(path.resolve(__dirname, './source.html')).toString()
 
+const spoilerMask = 12345
+
 beforeAll(() => {
     // Grab the list from the webpage itself (mocked)
     document.documentElement.innerHTML = source
@@ -26,7 +28,7 @@ test('Part 1 - Find two numbers that sum to 2020 and multiply them', done => {
         // This will multiply all numbers in an array
         .reduce((a, b) => a * b, 1)
 
-    expect(result).toBe(805731)
+    expect(result).toBe(793386 + spoilerMask)
     done()
 })
 
@@ -52,6 +54,6 @@ test('Part 2 - Find three numbers that sum to 2020 and multiply them', done => {
     // Note that this assumes the game only has one solution
     // The above wouldn't work otherwise. You would need
     // to check the array length and confirm the results
-    expect(result).toBe(192684960)
+    expect(result).toBe(192672615 + spoilerMask)
     done()
 })
