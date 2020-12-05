@@ -7,9 +7,13 @@ beforeAll(() => {
     // Grab the list from the webpage itself (mocked)
     document.documentElement.innerHTML = source
 
+    // Grab all the numbers
     window.numbers = document.querySelector('pre')
+        // Split by new line
         .textContent.split('\n')
+        // Convert strings to integers
         .map(n => parseInt(n, 10))
+        // Filter out any non numbers that creeped in.
         .filter(Number)
 })
 
