@@ -1,4 +1,4 @@
-JavaScript implementation of the Advent 2020 challenge written within JEST tests (because, why not...)
+JavaScript implementation of the Advent 2020 challenge written with JEST tests
 
 **note**: This repo has spoilers, of course, but they are masked so you you can safely look around.
 
