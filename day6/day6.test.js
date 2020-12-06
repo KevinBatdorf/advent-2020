@@ -19,11 +19,9 @@ beforeAll(() => {
 })
 
 test('Part 1 - questions answered', async () => {
-    // The reduce here just simply adds everything together
-    expect(questionsAnswered(answers).reduce((prev, next) => prev + next)).toBe(6625)
+    expect(questionsAnswered(answers)).toBe(6625)
 })
 
 test('Part 2 - Find number of questions every person in a group answered yes', async () => {
-    // The return is which questions, so the .map counts them and .reduce adds them all together
-    expect(questionsAnsweredYes(answers).map(a => a.length).reduce((accumulator, next) => accumulator + next)).toBe(3360)
+    expect(questionsAnsweredYes(answers)).toBe(3360)
 })
