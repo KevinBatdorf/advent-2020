@@ -4,8 +4,6 @@ const path = require('path')
 const source = fs.readFileSync(path.resolve(__dirname, './source.html')).toString()
 const { two2020, three2020 } = require('./day1')
 
-const spoilerMask = 12345
-
 beforeAll(() => {
     // Grab the list from the webpage itself (mocked)
     document.documentElement.innerHTML = source
@@ -21,9 +19,9 @@ beforeAll(() => {
 })
 
 test('Part 1 - Find two numbers that sum to 2020 and multiply them', async () => {
-    expect(two2020(numbers)).toBe(793386 + spoilerMask)
+    expect(two2020(numbers)).toBe(805731)
 })
 
 test('Part 2 - Find three numbers that sum to 2020 and multiply them', async () => {
-    expect(three2020(numbers)).toBe(192672615 + spoilerMask)
+    expect(three2020(numbers)).toBe(192684960)
 })

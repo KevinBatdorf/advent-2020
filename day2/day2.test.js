@@ -4,8 +4,6 @@ const path = require('path')
 const source = fs.readFileSync(path.resolve(__dirname, './source.html')).toString()
 const { validPasswords, validatePasswordsNew } = require('./day2')
 
-const spoilerMask = 123
-
 beforeAll(() => {
     // Grab the list from the webpage itself (mocked)
     document.documentElement.innerHTML = source
@@ -21,9 +19,9 @@ beforeAll(() => {
 })
 
 test('Part 1 - valid passwords', async () => {
-    expect(validPasswords(data).length).toBe(273 + spoilerMask)
+    expect(validPasswords(data).length).toBe(396)
 })
 
 test('Part 2 - ', async () => {
-    expect(validatePasswordsNew(data).length).toBe(305 + spoilerMask)
+    expect(validatePasswordsNew(data).length).toBe(428)
 })

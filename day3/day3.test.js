@@ -4,8 +4,6 @@ const path = require('path')
 const source = fs.readFileSync(path.resolve(__dirname, './source.html')).toString()
 const { findTheTrees, checkMultiplePaths, multiply } = require('./day3')
 
-const spoilerMask = 123
-
 beforeAll(() => {
     // Grab the list from the webpage itself (mocked)
     document.documentElement.innerHTML = source
@@ -19,7 +17,7 @@ beforeAll(() => {
 })
 
 test('Part 1 - Can count trees', async () => {
-    expect(findTheTrees(data, 3).length).toBe(33 + spoilerMask)
+    expect(findTheTrees(data, 3).length).toBe(156)
 })
 
 test('Part 2 - Can count multiple paths', async () => {
