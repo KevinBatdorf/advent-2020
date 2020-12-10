@@ -18,10 +18,10 @@ beforeAll(() => {
         .filter(Boolean)
 })
 
-test('Part 1 - questions answered', async () => {
+test('Part 1 - Find how many bag options', async () => {
     expect(findHowManyBags(rules, 'shiny gold')).toBe(378)
 })
 
-test('Part 2 - Find number of questions every person in a group answered yes', async () => {
+test('Part 2 - Find total number of bags required', async () => {
     expect(findHowManyBagsNeeded(rules, 'shiny gold')).toBe(27526)
 })
