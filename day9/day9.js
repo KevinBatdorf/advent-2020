@@ -16,7 +16,7 @@ module.exports = {
             if (accumulator.reduce((_a, _b, i, source) => {
                 // Check whether there is a number in the source that equals the
                 // next number we are testing minus another source number
-                return source.filter(s => source.includes((next - parseInt(s, 10)).toString())).length
+                return source.filter(s => source.includes((next - Number(s)).toString())).length
             })) {
                 // If so, then continue on and push/unshift the next number in series
                 accumulator.push(next)
@@ -24,7 +24,7 @@ module.exports = {
             }
 
             // If the above test failed, then we have our number
-            return parseInt(next, 10)
+            return Number(next)
         }, [])
     },
 
@@ -37,13 +37,13 @@ module.exports = {
             let total = 0
 
             // If it happens to be the target number, ignore it
-            if (parseInt(number, 10) === target) return false
+            if (Number(number) === target) return false
 
             // cycle through every number starting at the next number from the parent loop
             return data.slice(index).some((n, i) => {
 
                 // Keep track of the total
-                total = parseInt(total, 10) + parseInt(n, 10)
+                total = Number(total) + Number(n)
 
                 // If we find the total, set the range so we can later compute
                 // filter the lowest and highest
