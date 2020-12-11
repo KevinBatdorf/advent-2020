@@ -1,8 +1,10 @@
 module.exports = {
+    // Part 1
     getFinalValue: instructions => {
         return module.exports.processInstructions(instructions).total
     },
 
+    // Part 2
     valueWithBugFixed: instructions => {
         let testedValueIndex = -1
         let results = module.exports.processInstructions(instructions)
