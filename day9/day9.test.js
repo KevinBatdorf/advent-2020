@@ -22,6 +22,6 @@ test('Part 1 - Find first incorrect number', async () => {
     expect(partOne(data, 25)).toBe(756008079)
 })
 
-test('Part 2 - fix the bug', async () => {
+test('Part 2 - Find encryption bug', async () => {
     expect(partTwo(data, 25)).toBe(93727241)
 })
