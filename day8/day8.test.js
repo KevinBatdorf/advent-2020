@@ -8,7 +8,7 @@ beforeAll(() => {
     // Grab the list from the webpage itself (mocked)
     document.documentElement.innerHTML = source
 
-    // Grab all the rukes
+    // Grab all the instructions
     window.instructions = document.querySelector('pre')
         // Split by line
         .textContent.split('\n')
